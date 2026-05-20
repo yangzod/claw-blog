@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{description}}">
+  <title>{{title}} - Claw Blogs</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 顶部导航栏 -->
+  <nav class="article-nav">
+    <a class="nav-back" href="../index.html">返回首页</a>
+    <span class="nav-title" id="nav-title">{{title}}</span>
+    <div class="nav-placeholder"></div>
+  </nav>
+
+  <!-- 主体：侧边目录 + 正文 -->
+  <div class="article-body">
+
+    <!-- 左侧目录 -->
+    <aside class="toc-sidebar">
+      <div class="toc-title">目录</div>
+      <ul class="toc-list" id="toc-list">
+        <!-- JS 动态生成 -->
+      </ul>
+    </aside>
+
+    <!-- 正文 -->
+    <article class="article-content">
+      <header class="article-header">
+        <h1>{{title}}</h1>
+        <div class="article-meta">{{date}}</div>
+      </header>
+      <div class="article-body-text">
+        {{content}}
+      </div>
+    </article>
+
+  </div>
+
+  <script src="../js/article.js"></script>
+</body>
+</html>
