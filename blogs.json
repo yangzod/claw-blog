@@ -1,14 +1,8 @@
 [
   {
     "title": "Hello World",
-    "date": "2024-11-20",
+    "date": "2026-05-20",
     "description": "欢迎来到 Claw Blog，这是第一篇测试博文。",
     "slug": "hello-world"
-  },
-  {
-    "title": "静态博客的优缺点",
-    "date": "2024-11-18",
-    "description": "对比动态博客与静态博客的优劣，探讨为何静态博客越来越受欢迎。",
-    "slug": "static-site-generator"
   }
 ]
