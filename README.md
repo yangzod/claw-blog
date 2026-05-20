@@ -2,9 +2,7 @@
 
 一个极简的静态博客系统，零后端依赖，适合部署在 GitHub Pages。
 
-## 快速开始
-
-### 目录结构
+## 目录结构
 
 ```
 claw-blog-test/
@@ -12,14 +10,17 @@ claw-blog-test/
 │   ├── BLOGS.py                 # 渲染脚本
 │   └── *.md                     # 你的博文
 │
-└── public/                     # GitHub Pages 部署目录（推送到 gh-pages 分支）
-    ├── index.html
-    ├── blogs.json
-    ├── blogs/                   # 渲染后的 HTML 博文
-    ├── css/style.css
-    ├── js/
-    └── template.html
+├── blogs/                       # 渲染后的 HTML 博文
+├── css/style.css
+├── js/
+│   ├── home.js                  # 首页逻辑
+│   └── article.js               # 博文页逻辑
+├── index.html                   # 博客首页
+├── blogs.json                   # 目录索引（脚本自动生成）
+└── template.html                # 博文页 HTML 模板
 ```
+
+## 快速开始
 
 ### 写作流程
 
@@ -28,7 +29,7 @@ claw-blog-test/
 # 2. 运行渲染脚本
 python3 BLOGS/BLOGS.py
 
-# 3. 将 public/ 目录内容推送到 GitHub Pages
+# 3. 将根目录内容推送到 GitHub Pages
 ```
 
 ### 博文格式
@@ -49,15 +50,13 @@ description: "文章摘要"
 
 ```bash
 # 本地预览（启动任意静态服务器）
-cd public
 python3 -m http.server 8080
 # 访问 http://localhost:8080
 ```
 
 ## 部署到 GitHub Pages
 
-1. 将 `public/` 目录内容推送到 `gh-pages` 分支
-2. 或在 GitHub 仓库 Settings → Pages → Source 选择 `gh-pages` 分支
+将整个仓库推送到 GitHub，Settings → Pages → Source 选择 `master` 分支即可。
 
 ## 技术栈
 

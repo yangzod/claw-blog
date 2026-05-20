@@ -5,7 +5,7 @@ Claw Blog - 静态博客渲染脚本
   1. 扫描 blogs/ 目录下的 .md 文件
   2. 解析 front matter（title, date, description）
   3. 将 md 内容转成完整 HTML，注入 template.html 模板
-  4. 生成 public/blogs/[slug].html 和 public/blogs.json
+  4. 生成 blogs/[slug].html 和 blogs.json
 
 使用：
   python BLOGS.py
@@ -21,10 +21,10 @@ from pathlib import Path
 # ========== 配置 ==========
 BLOGS_DIR   = Path(__file__).parent.resolve()
 ROOT_DIR    = BLOGS_DIR.parent
-PUBLIC_DIR  = ROOT_DIR / "public"
-OUTPUT_BLOGS = PUBLIC_DIR / "blogs"
-TEMPLATE_FILE = PUBLIC_DIR / "template.html"
-MENU_FILE     = PUBLIC_DIR / "blogs.json"
+PUBLIC_DIR  = ROOT_DIR  # no longer used, aliased to ROOT for compatibility
+OUTPUT_BLOGS = ROOT_DIR / "blogs"
+TEMPLATE_FILE = ROOT_DIR / "template.html"
+MENU_FILE     = ROOT_DIR / "blogs.json"
 
 # 确保输出目录存在
 OUTPUT_BLOGS.mkdir(parents=True, exist_ok=True)

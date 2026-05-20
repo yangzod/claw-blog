@@ -77,8 +77,8 @@
 **输入：** `blogs/` 目录下的 `.md` 文件
 
 **输出：**
-- `public/blogs/[slug].html` — 完整独立 HTML 页面
-- `public/blogs.json` — 博客目录索引
+- `blogs/[slug].html` — 完整独立 HTML 页面
+- `blogs.json` — 博客目录索引
 
 **Front Matter 格式：**
 ```yaml
@@ -107,7 +107,7 @@ description: "博文摘要"
 2. 解析每个文件的 front matter
 3. 将 md 内容转为完整 HTML 页面（注入模板）
 4. 生成 `MENU.json` 包含所有博文元数据
-5. 输出到 `public/blogs/` 和 `public/blogs.json`
+5. 输出到 `blogs/` 和 `blogs.json`
 
 ### 4.3 页面渲染
 
